@@ -1,0 +1,10 @@
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;  /* Espacio debajo de la imagen */
+}
+
+.profileImage {
+    border-radius: 50%;  /* Esto hará que la imagen sea circular. Remover si no es necesario. */
+}

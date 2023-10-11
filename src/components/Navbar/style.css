@@ -1,0 +1,26 @@
+.navButton {
+    margin-left: 10px;
+    background-color: #333;
+    border-radius: 4px; 
+    transition: background-color 0.3s ease;
+}
+
+.navButton:hover {
+    background-color: #000000; 
+}
+
+.appBarStyle .navButton {
+    color: white !important; 
+}
+
+.appBarStyle .navButton:first-child {
+    margin-left: 0; 
+}
+
+.appBarStyle .navButton:last-child {
+    margin-right: 0; 
+}
+
+.appBarStyle .navButton.active {
+    border-bottom: 3px solid white; 
+}
