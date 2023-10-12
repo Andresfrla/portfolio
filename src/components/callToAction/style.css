@@ -1,0 +1,38 @@
+.downloadBtn {
+    font-size: 50px;
+    background-color: #f4c542 !important; 
+    color: black !important; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 2em;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4); 
+    margin: 10px;
+}
+
+.downloadBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(52, 152, 219, 0.5); 
+}
+
+
+.downloadBtn::before {
+    content: "";
+    background: rgba(255, 255, 255, 0.5);
+    width: 60px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -90px;
+    transform: skewX(-45deg);
+    transition: 0.7s ease;
+}
+
+.downloadBtn:hover::before {
+    left: 150%;
+}

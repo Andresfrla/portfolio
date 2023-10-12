@@ -2,9 +2,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;  /* Espacio debajo de la imagen */
+    margin-bottom: 20px;  
 }
 
 .profileImage {
-    border-radius: 50%;  /* Esto hará que la imagen sea circular. Remover si no es necesario. */
+    border-radius: 50%;
+    margin: 100px; 
 }
+
+.aboutCard {
+    background-color:rgba(0, 31, 63, 0.7);
+    backdrop-filter: blur(100px);
+    color: white; 
+    margin-top: 20px;
+    padding: 20px; 
+    border-radius: 8px; 
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+    margin: 20px 0;          
+}
+
+.card {
+    margin-top: 20px; /* Añade margen arriba para separar de otros elementos */
+}
+

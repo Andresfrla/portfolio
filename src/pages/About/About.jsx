@@ -1,8 +1,10 @@
 import React from 'react';
-import { Container, Typography, Link, Box } from '@mui/material';
+import { Container, Typography, Link, Box, Card, CardContent } from '@mui/material';
 import LinkIcon from '@mui/icons-material/Link';
 import profileImage from '../../img/1695652006050.png'
 import './style.css'
+import CallToAction from '../../components/callToAction/CallToAction';
+
 
 function About() {
     return (
@@ -10,6 +12,12 @@ function About() {
             <div className="imageContainer">
                 <img src={profileImage} alt="Profile" width={'300px'} className="profileImage"/>
             </div>
+            <div>
+            <div className="buttonContainer">
+            <CallToAction/>
+            </div>
+            <Card className='card'>
+            <CardContent className="aboutCard">
             <Typography variant="h2" gutterBottom>
                 About Me
             </Typography>
@@ -57,6 +65,10 @@ function About() {
             <Typography paragraph textAlign={'justify'}>
                 📄 Interested in gaining a more comprehensive view of my professional journey? <Link href="https://drive.google.com/file/d/1SjZksltRKK7pujRZM70GclVWws53qpTn/view?usp=sharing" target="_blank" rel="noopener" color="primary" underline="hover"><LinkIcon fontSize="small" /> Download my resume</Link>.
             </Typography>
+            </CardContent>
+            </Card>
+            </div>
+
         </Container>
     );
 }
