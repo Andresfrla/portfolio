@@ -3,6 +3,8 @@ import { Container, Typography, Link, Box, Card, CardContent } from '@mui/materi
 import LinkIcon from '@mui/icons-material/Link';
 import profileImage from '../../img/1695652006050.png'
 import './style.css'
+import CallToAction from '../../components/callToAction/CallToAction';
+
 
 function About() {
     return (
@@ -11,7 +13,10 @@ function About() {
                 <img src={profileImage} alt="Profile" width={'300px'} className="profileImage"/>
             </div>
             <div>
-            <Card>
+            <div className="buttonContainer">
+            <CallToAction/>
+            </div>
+            <Card className='card'>
             <CardContent className="aboutCard">
             <Typography variant="h2" gutterBottom>
                 About Me

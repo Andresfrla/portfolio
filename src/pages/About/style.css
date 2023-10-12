@@ -11,9 +11,22 @@
 }
 
 .aboutCard {
-    background-color: #001f3f; 
+    background-color:rgba(0, 31, 63, 0.7);
+    backdrop-filter: blur(100px);
     color: white; 
     margin-top: 20px;
     padding: 20px; 
     border-radius: 8px; 
 }
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+    margin: 20px 0;          
+}
+
+.card {
+    margin-top: 20px; /* Añade margen arriba para separar de otros elementos */
+}
+
