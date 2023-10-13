@@ -4,13 +4,14 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PhoneCallbackRoundedIcon from '@mui/icons-material/PhoneCallbackRounded';
 import MailRoundedIcon from '@mui/icons-material/MailRounded';
+import './style.css'
 
 function ContactMe() {
 
     return (
-        <Container>
+        <Container className="container">
             <Typography variant="h4" gutterBottom>
-                Let's connect
+                Let's get in touch
             </Typography>
             <Typography>
                 <Link href="mailto:andresfranla@gmail.com"><MailRoundedIcon/> andresfranla@gmail.com</Link>

@@ -43,7 +43,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="projectsContainer">
+    <div className="projectsContainer" style={{margin: '100px'}}>
       <Typography variant="h4" gutterBottom>
         My Projects
       </Typography>
