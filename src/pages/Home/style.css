@@ -1,9 +1,37 @@
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; <-- Elimina esto */
+}
+
 .intro {
-    margin: 350px;
-    text-align: center;
-    top: 55vh;
-    width: 100%;
-    font-family: 'Bebas Neue', sans-serif;;
-    text-shadow: 3px 3px 5px #000000;
-    font-size: xx-large;
+  text-align: center;
+  width: 100%;
+  font-family: 'Bebas Neue', sans-serif;
+  text-shadow: 3px 3px 5px #000000;
+  font-size: xx-large;
+}
+
+.intro h1 {
+  font-size: 2rem;  
+  text-align: center; 
+  margin-top: 2rem; 
+  margin-bottom: 2rem; 
+}
+
+/* Estilos generales ya definidos... */
+
+.about, .projects, .contactMe {
+  padding: 20px; /* Añade algo de padding */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 600px) {
+  .intro h1 {
+      font-size: 1.5rem; 
   }
+
+  .about, .projects, .contactMe {
+      padding: 10px; /* Reduce el padding en dispositivos móviles */
+  }
+}
