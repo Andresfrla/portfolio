@@ -1,7 +1,9 @@
 .homeContainer {
   display: flex;
   flex-direction: column;
-  /* height: 100vh; <-- Elimina esto */
+  min-height: 100vh; /* Se asegura de que homeContainer cubra al menos toda la altura de la ventana del navegador */
+  justify-content: center; /* Centra los contenidos verticalmente */
+  align-items: center;    /* Centra los contenidos horizontalmente */
 }
 
 .intro {
@@ -10,13 +12,17 @@
   font-family: 'Bebas Neue', sans-serif;
   text-shadow: 3px 3px 5px #000000;
   font-size: xx-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Asegura que los elementos hijos se apilen verticalmente */
 }
 
 .intro h1 {
-  font-size: 2rem;  
+  font-size: 5vw; /* Ajusta el tamaño según lo necesites. 8vw es solo una sugerencia */
   text-align: center; 
-  margin-top: 2rem; 
-  margin-bottom: 2rem; 
+  margin-top: 11rem; 
+  margin-bottom: 10rem; 
 }
 
 /* Estilos generales ya definidos... */

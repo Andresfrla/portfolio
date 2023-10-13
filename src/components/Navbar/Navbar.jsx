@@ -34,37 +34,49 @@ function Navbar() {
 
     return (
         <>
-            <AppBar position="fixed" className="appBarStyle" style={{ background }}>
-                <Toolbar style={{margin: '10px'}}>
-                    <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleToggleDrawer}>
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6" style={{ flexGrow: 1 }} className="desktopOnly">
-                        My Portfolio
-                    </Typography>
-                    <div className="desktopOnly">
-                        <CallToAction/>
-                        <Button className="navButton" color="inherit" 
-                        style={{margin: '10px'}}
+        <AppBar position="fixed" className="appBarStyle" style={{ background }}>
+            <Toolbar style={{ margin: '10px' }}>
+                {/* Botón del menú hamburguesa (visible solo en móvil) */}
+                <IconButton edge="start" color="inherit" aria-label="menu" className="menuButton" onClick={handleToggleDrawer}>
+                    <MenuIcon />
+                </IconButton>
+
+                {/* Título "My Portfolio" como enlace a Home (visible solo en escritorio) */}
+                <Button color="inherit" component={NavLink} to="/" className="desktopOnly">
+                    My Portfolio
+                </Button>
+                
+                <Typography variant="h6" style={{ flexGrow: 1 }} className="desktopOnly"></Typography>
+
+                <div className="desktopOnly">
+                    <CallToAction />
+                    <Button className="navButton" color="inherit" 
+                        style={{ margin: '10px' }}
                         component={NavLink} 
                         to="/about" 
                         value="/about"
-                        startIcon={<AssignmentIndRoundedIcon />}>About me</Button>
-                        <Button className="navButton" color="inherit" 
-                        style={{margin: '10px'}}
+                        startIcon={<AssignmentIndRoundedIcon />}>
+                        About me
+                    </Button>
+                    <Button className="navButton" color="inherit" 
+                        style={{ margin: '10px' }}
                         component={NavLink} 
                         to="/projects" 
                         value="/projects"
-                        startIcon={<BackupTableRoundedIcon/>}>Projects</Button>
-                        <Button className="navButton" color="inherit"
-                        style={{margin: '10px'}} 
+                        startIcon={<BackupTableRoundedIcon />}>
+                        Projects
+                    </Button>
+                    <Button className="navButton" color="inherit"
+                        style={{ margin: '10px' }} 
                         component={NavLink} 
                         to="/contact" 
                         value="/contact"
-                        startIcon={<ConnectWithoutContactRoundedIcon/>}>Let's Connect</Button>
-                    </div>
-                </Toolbar>
-            </AppBar>
+                        startIcon={<ConnectWithoutContactRoundedIcon />}>
+                        Let's Connect
+                    </Button>
+                </div>
+            </Toolbar>
+        </AppBar>
             
             <Drawer anchor="left" open={drawerOpen} onClose={handleToggleDrawer}>
                 <List>

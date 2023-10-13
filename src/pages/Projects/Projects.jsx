@@ -43,19 +43,19 @@ const Projects = () => {
   ];
 
   return (
-    <div className="projectsContainer" style={{margin: '100px'}}>
+    <div className="projectsContainer">
       <Typography variant="h4" gutterBottom>
         My Projects
       </Typography>
       <Grid container spacing={4}>
         {projects.map((project, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
+          <Grid item xs={12} sm={6} md={3} key={index}>
             <ProjectCard project={project} />
           </Grid>
         ))}
       </Grid>
     </div>
-  );
+);
 };
 
 export default Projects;

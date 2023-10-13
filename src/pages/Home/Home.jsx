@@ -8,8 +8,8 @@ import './style.css';
 
 function Home() {
   return (
-    <div className="homeContainer">
-        <Container className={'intro'} id='home' fluid>
+    <div className="homeContainer" >
+        <Container className={'intro'} id='home' fluid style={{marginTop: '100px'}}>
             <h1>&sdot; 
                 <Typed
                     strings={[
