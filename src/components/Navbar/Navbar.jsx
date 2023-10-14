@@ -92,7 +92,7 @@ function Navbar() {
                         <AssignmentIndRoundedIcon /> About me
                     </ListItem>
                     <ListItem button component={NavLink} to="/projects" value="/projects" onClick={handleToggleDrawer}>
-                        <BackupTableRoundedIcon /> Projects
+                        <BusinessCenterIcon /> Projects
                     </ListItem>
                     <ListItem button component={NavLink} to="/contact" value="/contact" onClick={handleToggleDrawer}>
                         <ConnectWithoutContactRoundedIcon /> Let's Connect
