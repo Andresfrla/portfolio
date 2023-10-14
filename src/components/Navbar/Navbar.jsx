@@ -95,7 +95,7 @@ function Navbar() {
                         <BusinessCenterIcon /> Projects
                     </ListItem>
                     <ListItem button component={NavLink} to="/contact" value="/contact" onClick={handleToggleDrawer}>
-                        <ConnectWithoutContactRoundedIcon /> Let's Connect
+                        <ContactPhoneIcon /> Let's Connect
                     </ListItem>
                 </List>
             </Drawer>
