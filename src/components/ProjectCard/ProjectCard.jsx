@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardMedia, Typography, Box } from '@mui/material';
-import LinkIcon from '@mui/icons-material/Link';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkIcon from '@mui/icons-material';
+import GitHubIcon from '@mui/icons-material';
 
 const ProjectCard = ({ project }) => {
   return (

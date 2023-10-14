@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Typography, Link, Box, Card, CardContent } from '@mui/material';
-import LinkIcon from '@mui/icons-material/Link';
+import LinkIcon from '@mui/icons-material';
 import profileImage from '../../img/1695652006050.png'
 import './style.css'
 import CallToAction from '../../components/callToAction/CallToAction';

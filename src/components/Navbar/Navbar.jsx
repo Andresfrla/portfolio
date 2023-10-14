@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem } from '@mui/material';
 import { NavLink } from 'react-router-dom';
-import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
-import AssignmentIndRoundedIcon from '@mui/icons-material/AssignmentIndRounded';
-import BackupTableRoundedIcon from '@mui/icons-material/BackupTableRounded';
-import ConnectWithoutContactRoundedIcon from '@mui/icons-material/ConnectWithoutContactRounded';
-import MenuIcon from '@mui/icons-material/Menu';
+import HomeRoundedIcon from '@mui/icons-material';
+import AssignmentIndRoundedIcon from '@mui/icons-material';
+import BackupTableRoundedIcon from '@mui/icons-material';
+import ConnectWithoutContactRoundedIcon from '@mui/icons-material';
+import MenuIcon from '@mui/icons-material';
 import './style.css';
 import CallToAction from '../callToAction/CallToAction';
 

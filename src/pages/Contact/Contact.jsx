@@ -1,9 +1,9 @@
 import { Container, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import PhoneCallbackRoundedIcon from '@mui/icons-material/PhoneCallbackRounded';
-import MailRoundedIcon from '@mui/icons-material/MailRounded';
+import GitHubIcon from '@mui/icons-material';
+import LinkedInIcon from '@mui/icons-material';
+import PhoneCallbackRoundedIcon from '@mui/icons-material';
+import MailRoundedIcon from '@mui/icons-material';
 import './style.css'
 
 function ContactMe() {
