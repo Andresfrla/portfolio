@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem
 import { NavLink } from 'react-router-dom';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import AssignmentIndRoundedIcon from '@material-ui/icons/AssignmentIndRounded';
-import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';;
+import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
 import MenuIcon from '@material-ui/icons/Menu';
 import './style.css';
