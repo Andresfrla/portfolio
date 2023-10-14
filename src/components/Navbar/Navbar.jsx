@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem
 import { NavLink } from 'react-router-dom';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import AssignmentIndRoundedIcon from '@material-ui/icons/AssignmentIndRounded';
-import BackupTableRoundedIcon from '@material-ui/icons/BackupTableRounded';
+import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';;
 import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
 import MenuIcon from '@material-ui/icons/Menu';
 import './style.css';
@@ -67,7 +67,7 @@ function Navbar() {
                         component={NavLink} 
                         to="/projects" 
                         value="/projects"
-                        startIcon={<BackupTableRoundedIcon />}>
+                        startIcon={<BusinessCenterIcon />}>
                         Projects
                     </Button>
                     <Button className="navButton" color="inherit"
