@@ -1,56 +1,68 @@
-.navButton {
+.appBarStyle .navButton {
+    color: white !important;
     margin-left: 10px;
     background-color: #333;
-    border-radius: 4px; 
+    border-radius: 4px;
     transition: background-color 0.3s ease;
 }
 
-.navButton:hover {
-    background-color: #000000; 
-}
-
-.appBarStyle .navButton {
-    color: white !important; 
+.appBarStyle .navButton:hover {
+    background-color: #000000;
 }
 
 .appBarStyle .navButton:first-child {
-    margin-left: 0; 
+    margin-left: 0;
 }
 
 .appBarStyle .navButton:last-child {
-    margin-right: 0; 
+    margin-right: 0;
 }
 
 .appBarStyle .navButton.active {
-    border-bottom: 3px solid white; 
+    border-bottom: 3px solid white;
 }
 
-.desktopOnly {
-    display: none;
+.desktopVisible {
+    display: block;
 }
 
-@media (min-width: 600px) {
-    .desktopOnly {
-        display: block;
-    }
-}
-
-@media (max-width: 768px) {
-    .desktopOnly {
-        display: none;
-    }
-    .menuButton {
-        display: block;
-    }
+.menuIconMobile {
+    display: none; /* Por defecto ocultamos el ícono del menú */
 }
 
 hr {
-    border: none; 
-    height: 2px; 
+    border: block;
+    height: 2px;
     background-color: #333;
-    margin: 20px 0; 
+    margin: 20px 0;
 }
 
-.menuButton {
-    display: none;
+/* Reglas para dispositivos con ancho entre 600px y 768px (por ejemplo, tablets) */
+@media (min-width: 600px) and (max-width: 768px) {
+    .desktopVisible {
+        display: none;
+    }
+}
+
+/* Reglas para dispositivos con ancho menor a 599px (móviles) */
+@media (max-width: 599px) {
+    /* Esconde elementos específicos en el navbar */
+    .appBarStyle .navButton, .appBarStyle .callToAction, .desktopVisible {
+        display: none;
+    }
+
+    /* Muestra el ícono del menú en móviles */
+    .menuIconMobile {
+        display: block;
+    }
+}
+
+/* Reglas para dispositivos con ancho mayor o igual a 600px (desktop) */
+@media (min-width: 600px) {
+    .menuIconMobile {
+        display: none; /* Esconde el ícono del menú en desktop */
+    }
+    .desktopVisible {
+        display: block; /* Mostramos elementos designados para desktop */
+    }
 }

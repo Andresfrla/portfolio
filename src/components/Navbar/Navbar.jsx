@@ -37,9 +37,16 @@ function Navbar() {
         <AppBar position="fixed" className="appBarStyle" style={{ background }}>
             <Toolbar style={{ margin: '10px' }}>
                 {/* Botón del menú hamburguesa (visible solo en móvil) */}
-                <IconButton edge="start" color="inherit" aria-label="menu" className="menuButton" onClick={handleToggleDrawer}>
+                <IconButton 
+                    edge="start" 
+                    color="inherit" 
+                    aria-label="menu" 
+                    onClick={handleToggleDrawer} 
+                    className="menuIconMobile"   /* <--- Añade la clase aquí */
+                >
                     <MenuIcon />
                 </IconButton>
+
 
                 {/* Título "My Portfolio" como enlace a Home (visible solo en escritorio) */}
                 <Button color="inherit" component={NavLink} to="/" className="desktopOnly">
