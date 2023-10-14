@@ -1,7 +1,7 @@
 import React from 'react';
-import { Card, CardContent, CardMedia, Typography, Box } from '@mui/material';
-import LinkIcon from '@mui/icons-material';
-import GitHubIcon from '@mui/icons-material';
+import { Card, CardContent, CardMedia, Typography, Box } from '@material-ui/core';
+import LinkIcon from '@material-ui/icons/Link';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 const ProjectCard = ({ project }) => {
   return (
@@ -17,10 +17,10 @@ const ProjectCard = ({ project }) => {
         <Typography gutterBottom variant="h5" component="div">
           {project.title}
         </Typography>
-        <Typography variant="body2" color="text.secondary" align="justify">
+        <Typography variant="body2" color="textSecondary" align="justify">
           {project.description}
         </Typography>
-        <Box display="flex" justifyContent="center" alignItems="center" marginTop="16px" gap="16px">
+        <Box display="flex" justifyContent="center" alignItems="center" mt={2} style={{ gap: '16px' }}>
           {project.projectURL && 
             <a href={project.projectURL} target="_blank" rel="noopener noreferrer">
               <LinkIcon />

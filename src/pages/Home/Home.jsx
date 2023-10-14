@@ -1,4 +1,4 @@
-import { Container, Typography } from '@mui/material';
+import { Container, Typography } from '@material-ui/core';
 import Typed from 'react-typed';
 import React from 'react';
 import About from '../About/About';
@@ -8,9 +8,10 @@ import './style.css';
 
 function Home() {
   return (
-    <div className="homeContainer" >
-        <Container className={'intro'} id='home' fluid style={{marginTop: '100px'}}>
-            <h1>&sdot; 
+    <div className="homeContainer">
+        <Container className={'intro'} id='home' maxWidth="lg" style={{marginTop: '100px'}}>
+            <Typography variant="h1" align="center">
+                &sdot; 
                 <Typed
                     strings={[
                         " Hello! I'm Andres ",
@@ -21,15 +22,16 @@ function Home() {
                     backSpeed={50}
                     loop 
                 /> 
-            &sdot;</h1>
+            &sdot;
+            </Typography>
         </Container>
-        <Container className="about">
+        <Container className="about" maxWidth="lg">
             <About/>
         </Container>
-        <Container className="projects">
+        <Container className="projects" maxWidth="lg">
             <Projects/>
         </Container>
-        <Container className="contactMe">
+        <Container className="contactMe" maxWidth="lg">
             <ContactMe/>
         </Container>
     </div>
