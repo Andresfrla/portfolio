@@ -1,3 +1,15 @@
 .projectsContainer {
-    margin: 100px;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
+.gridContainer {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .gridItem {
+    margin: 100px !important;  /* Aquí defines el margen que desees */
+  }
 }

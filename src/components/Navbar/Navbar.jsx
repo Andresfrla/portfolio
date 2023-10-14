@@ -1,15 +1,21 @@
 import { useEffect, useState } from 'react';
-import { AppBar, Toolbar, Typography, Button } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import AssignmentIndRoundedIcon from '@mui/icons-material/AssignmentIndRounded';
 import BackupTableRoundedIcon from '@mui/icons-material/BackupTableRounded';
 import ConnectWithoutContactRoundedIcon from '@mui/icons-material/ConnectWithoutContactRounded';
-import './style.css'; 
+import MenuIcon from '@mui/icons-material/Menu';
+import './style.css';
 import CallToAction from '../callToAction/CallToAction';
 
 function Navbar() {
     const [background, setBackground] = useState("rgba(0, 31, 63, 1)");
+    const [drawerOpen, setDrawerOpen] = useState(false);
+
+    const handleToggleDrawer = () => {
+        setDrawerOpen(!drawerOpen);
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -27,43 +33,76 @@ function Navbar() {
     }, []);
 
     return (
+        <>
         <AppBar position="fixed" className="appBarStyle" style={{ background }}>
-            <Toolbar style={{margin: '10px'}}>
-                <Button 
-                    className="navButton" 
+            <Toolbar style={{ margin: '10px' }}>
+                {/* Botón del menú hamburguesa (visible solo en móvil) */}
+                <IconButton 
+                    edge="start" 
                     color="inherit" 
-                    component={NavLink} 
-                    to="/" 
-                    value="/"
-                    startIcon={<HomeRoundedIcon />}
-                    style={{color: 'white', margin : '10px'}}
+                    aria-label="menu" 
+                    onClick={handleToggleDrawer} 
+                    className="menuIconMobile"   /* <--- Añade la clase aquí */
                 >
-                    My Portfolio
-                </Button> 
-                <Typography variant="h6" style={{ flexGrow: 1 }} />
+                    <MenuIcon />
+                </IconButton>
 
-                <CallToAction/>
+
+                {/* Título "My Portfolio" como enlace a Home (visible solo en escritorio) */}
+                <Button color="inherit" component={NavLink} to="/" className="desktopOnly">
+                    My Portfolio
+                </Button>
                 
-                <Button className="navButton" color="inherit" 
-                style={{margin: '10px'}}
-                component={NavLink} 
-                to="/about" 
-                value="/about"
-                startIcon={<AssignmentIndRoundedIcon />}>About me</Button>
-                <Button className="navButton" color="inherit" 
-                style={{margin: '10px'}}
-                component={NavLink} 
-                to="/projects" 
-                value="/projects"
-                startIcon={<BackupTableRoundedIcon/>}>Projects</Button>
-                <Button className="navButton" color="inherit"
-                style={{margin: '10px'}} 
-                component={NavLink} 
-                to="/contact" 
-                value="/contact"
-                startIcon={<ConnectWithoutContactRoundedIcon/>}>Let's Connect</Button>
+                <Typography variant="h6" style={{ flexGrow: 1 }} className="desktopOnly"></Typography>
+
+                <div className="desktopOnly">
+                    <CallToAction />
+                    <Button className="navButton" color="inherit" 
+                        style={{ margin: '10px' }}
+                        component={NavLink} 
+                        to="/about" 
+                        value="/about"
+                        startIcon={<AssignmentIndRoundedIcon />}>
+                        About me
+                    </Button>
+                    <Button className="navButton" color="inherit" 
+                        style={{ margin: '10px' }}
+                        component={NavLink} 
+                        to="/projects" 
+                        value="/projects"
+                        startIcon={<BackupTableRoundedIcon />}>
+                        Projects
+                    </Button>
+                    <Button className="navButton" color="inherit"
+                        style={{ margin: '10px' }} 
+                        component={NavLink} 
+                        to="/contact" 
+                        value="/contact"
+                        startIcon={<ConnectWithoutContactRoundedIcon />}>
+                        Let's Connect
+                    </Button>
+                </div>
             </Toolbar>
         </AppBar>
+            
+            <Drawer anchor="left" open={drawerOpen} onClose={handleToggleDrawer}>
+                <List>
+                    <ListItem button component={NavLink} to="/" value="/" onClick={handleToggleDrawer}>
+                        <HomeRoundedIcon /> My Portfolio
+                    </ListItem>
+                    <hr/>
+                    <ListItem button component={NavLink} to="/about" value="/about" onClick={handleToggleDrawer}>
+                        <AssignmentIndRoundedIcon /> About me
+                    </ListItem>
+                    <ListItem button component={NavLink} to="/projects" value="/projects" onClick={handleToggleDrawer}>
+                        <BackupTableRoundedIcon /> Projects
+                    </ListItem>
+                    <ListItem button component={NavLink} to="/contact" value="/contact" onClick={handleToggleDrawer}>
+                        <ConnectWithoutContactRoundedIcon /> Let's Connect
+                    </ListItem>
+                </List>
+            </Drawer>
+        </>
     );
 }
 
