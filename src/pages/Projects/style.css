@@ -4,8 +4,12 @@
   overflow: auto;
 }
 
+.gridContainer {
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 768px) {
-  .projectsContainer h4 {
-    font-size: 100000;
+  .gridItem {
+    margin: 100px !important;  /* Aquí defines el margen que desees */
   }
 }

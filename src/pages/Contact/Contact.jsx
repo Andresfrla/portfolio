@@ -9,7 +9,7 @@ import './style.css'
 function ContactMe() {
 
     return (
-        <Container className="container">
+        <Container className="container" style={{marginTop: '200px'}}>
             <Typography variant="h4" gutterBottom>
                 Let's get in touch
             </Typography>
