@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import AssignmentIndRoundedIcon from '@material-ui/icons/AssignmentIndRounded';
 import BackupTableRoundedIcon from '@material-ui/icons/BackupTableRounded';
-import ConnectWithoutContactRoundedIcon from '@material-ui/icons/ConnectWithoutContactRounded';
+import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
 import MenuIcon from '@material-ui/icons/Menu';
 import './style.css';
 import CallToAction from '../callToAction/CallToAction';
@@ -75,7 +75,7 @@ function Navbar() {
                         component={NavLink} 
                         to="/contact" 
                         value="/contact"
-                        startIcon={<ConnectWithoutContactRoundedIcon />}>
+                        startIcon={<ContactPhoneIcon />}>
                         Let's Connect
                     </Button>
                 </div>
