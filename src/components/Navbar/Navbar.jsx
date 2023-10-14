@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
-import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem } from '@material-ui/core';
 import { NavLink } from 'react-router-dom';
-import HomeRoundedIcon from '@mui/icons-material';
-import AssignmentIndRoundedIcon from '@mui/icons-material';
-import BackupTableRoundedIcon from '@mui/icons-material';
-import ConnectWithoutContactRoundedIcon from '@mui/icons-material';
-import MenuIcon from '@mui/icons-material';
+import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
+import AssignmentIndRoundedIcon from '@material-ui/icons/AssignmentIndRounded';
+import BackupTableRoundedIcon from '@material-ui/icons/BackupTableRounded';
+import ConnectWithoutContactRoundedIcon from '@material-ui/icons/ConnectWithoutContactRounded';
+import MenuIcon from '@material-ui/icons/Menu';
 import './style.css';
 import CallToAction from '../callToAction/CallToAction';
 
@@ -36,19 +36,16 @@ function Navbar() {
         <>
         <AppBar position="fixed" className="appBarStyle" style={{ background }}>
             <Toolbar style={{ margin: '10px' }}>
-                {/* Botón del menú hamburguesa (visible solo en móvil) */}
                 <IconButton 
                     edge="start" 
                     color="inherit" 
                     aria-label="menu" 
                     onClick={handleToggleDrawer} 
-                    className="menuIconMobile"   /* <--- Añade la clase aquí */
+                    className="menuIconMobile"
                 >
                     <MenuIcon />
                 </IconButton>
 
-
-                {/* Título "My Portfolio" como enlace a Home (visible solo en escritorio) */}
                 <Button color="inherit" component={NavLink} to="/" className="desktopOnly">
                     My Portfolio
                 </Button>

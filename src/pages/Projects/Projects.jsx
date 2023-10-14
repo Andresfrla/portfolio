@@ -1,6 +1,5 @@
 import React from 'react';
-import Grid from '@mui/material';
-import { Typography } from '@mui/material';
+import { Grid, Typography } from '@material-ui/core';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 
 const Projects = () => {

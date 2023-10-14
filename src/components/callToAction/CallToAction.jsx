@@ -1,4 +1,4 @@
-import { Button } from '@mui/material';
+import { Button } from '@material-ui/core/material';
 import './style.css';
 
 const CallToAction = () => {
