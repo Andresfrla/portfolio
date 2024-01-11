@@ -30,3 +30,10 @@
     margin-top: 20px; /* Añade margen arriba para separar de otros elementos */
 }
 
+.imgCard {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+

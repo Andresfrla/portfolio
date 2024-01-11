@@ -4,6 +4,7 @@ import LinkIcon from '@material-ui/icons/Link';
 import profileImage from '../../img/1695652006050.png';
 import './style.css';
 import CallToAction from '../../components/callToAction/CallToAction';
+import certificate from '../../img/meta-front-end-developer-certificate.png'
 
 function About() {
     return (
@@ -63,6 +64,10 @@ function About() {
                         <Typography align="justify" paragraph>
                             📄 Interested in gaining a more comprehensive view of my professional journey? <Link href="https://drive.google.com/file/d/1SjZksltRKK7pujRZM70GclVWws53qpTn/view?usp=sharing" target="_blank" rel="noopener noreferrer" color="primary" underline="hover"><LinkIcon fontSize="small" /> Download my resume</Link>.
                         </Typography>
+
+                        <Box className='imgCard'>
+                            <img src={certificate}  alt="vertificate" />
+                        </Box>
                     </CardContent>
                 </Card>
             </div>
