@@ -38,7 +38,13 @@ const Projects = () => {
       imageURL: 'https://i.ibb.co/QYg5Dz5/cloning.jpg',
       gitURL: 'https://github.com/Andresfrla/Tik-Tak-Toe-React',
       projectURL: ''
-    }
+    },{
+      title: 'Basic Ecommer',
+      description: `Basic E-commerce using Javascript using Next.Js launcher, using the states of React`,
+      imageURL: 'https://i.ibb.co/9Hk9vXC/Sin-t-tulo.jpg',
+      gitURL: 'https://github.com/Andresfrla/basic-shop-react',
+      projectURL: ''
+    },
   ];
 
   return (
